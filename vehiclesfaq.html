@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Performance Calculator | Vehicles</title>
+
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/forms.css">
+</head>
+
+<body class="w3-light-grey">
+
+<header>
+  <nav class="w3-bar w3-black w3-large" role="navigation" aria-label="Primary">
+    <a href="index.html" class="w3-bar-item w3-button w3-hide-small">Home</a>
+    <a href="gallery.html" class="w3-bar-item w3-button w3-hide-small">Gallery</a>
+    <a href="about.html" class="w3-bar-item w3-button w3-hide-small">About</a>
+    <a href="contact.html" class="w3-bar-item w3-button w3-hide-small">Contact</a>
+    <a href="modcalc.html" class="w3-bar-item w3-button w3-hide-small">Calculator</a>
+
+    <button class="w3-bar-item w3-button w3-right w3-hide-medium w3-hide-large"
+            type="button" onclick="toggleMenu()" aria-label="Open menu">☰</button>
+  </nav>
+
+  <div class="w3-container w3-center w3-padding-16">
+    <img src="images/logo/logo.png"
+         alt="Performance Calculator Logo"
+         class="vehicles-logo centered-logo">
+  </div>
+
+  <div id="mobileMenu" class="w3-bar-block w3-black w3-hide w3-hide-medium w3-hide-large">
+    <a href="index.html" class="w3-bar-item w3-button">Home</a>
+    <a href="gallery.html" class="w3-bar-item w3-button">Gallery</a>
+    <a href="about.html" class="w3-bar-item w3-button">About</a>
+    <a href="contact.html" class="w3-bar-item w3-button">Contact</a>
+    <a href="modcalc.html" class="w3-bar-item w3-button">Calculator</a>
+  </div>
+
+  <!-- Breadcrumb -->
+  <ul class="w3-ul w3-small w3-text-grey w3-padding">
+    <li class="w3-padding-small">
+      <a href="index.html">Home</a> &gt; Vehicles FAQ
+    </li>
+  </ul>
+</header>
+
+<main class="w3-content w3-padding-32 vehicles-wrap">
+  <h1 id="top" class="w3-xxlarge">Vehicles FAQ</h1>
+  <p class="w3-text-grey">
+    Your vehicle platform determines which mods fit, how much power you can safely gain, and how dyno results should be interpreted.
+    This page explains the “why” before you pick bolt-ons or run performance-per-dollar (PPD) numbers.
+  </p>
+
+  <!-- Jump Links (Down) -->
+  <nav class="w3-bar w3-small w3-margin-top w3-margin-bottom" aria-label="Page jump links">
+    <a class="w3-button w3-white w3-border w3-round-large" href="#platform">Jump to Platform</a>
+    <a class="w3-button w3-white w3-border w3-round-large" href="#examples">Jump to Examples</a>
+    <a class="w3-button w3-white w3-border w3-round-large" href="#next">Jump to Next Steps</a>
+  </nav>
+
+  <div class="w3-row-padding w3-margin-top">
+
+    <!-- Card: Why platform matters -->
+    <div class="w3-col l6 m12 s12 w3-margin-bottom">
+      <div class="w3-card w3-white w3-round-large w3-padding-24">
+        <h2 id="platform" class="w3-xlarge">Why platform matters</h2>
+        <ul class="w3-ul">
+          <li><strong>Fitment:</strong> intakes, downpipes, and intercoolers are platform-specific.</li>
+          <li><strong>Baseline power:</strong> a +40hp gain feels different on a 180hp car vs. a 350hp car.</li>
+          <li><strong>Limits:</strong> fueling, cooling, and transmission/clutch capacity set real boundaries.</li>
+          <li><strong>Consistency:</strong> dyno numbers vary by dyno type, conditions, and gear used.</li>
+        </ul>
+
+        <!-- Jump Link (Up) -->
+        <p class="w3-margin-top">
+          <a href="#top" class="w3-small">Back to top ↑</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Card: Common examples -->
+    <div class="w3-col l6 m12 s12 w3-margin-bottom">
+      <div class="w3-card w3-white w3-round-large w3-padding-24">
+        <h2 id="examples" class="w3-xlarge">Common examples</h2>
+        <p class="w3-text-grey w3-small w3-margin-top">
+          These are just quick examples of how different vehicle types change mod strategy.
+        </p>
+        <ul class="w3-ul">
+          <li><strong>Turbo 4-cyl (MQB / WRX / CTR):</strong> intake + downpipe + tune often gives big gains.</li>
+          <li><strong>NA sports cars (BRZ/86):</strong> bolt-ons help, but gains are smaller without forced induction.</li>
+          <li><strong>V8 platforms (Mustang/Camaro):</strong> traction, cooling, and supporting mods matter a lot.</li>
+          <li><strong>AWD performance (GTR / Golf R):</strong> drivetrain handles power well, but heat management is key.</li>
+        </ul>
+
+        <!-- Jump Link (Up) -->
+        <p class="w3-margin-top">
+          <a href="#top" class="w3-small">Back to top ↑</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Card: Where to go next -->
+    <div class="w3-col l12 m12 s12 w3-margin-bottom">
+      <div class="w3-card w3-white w3-round-large w3-padding-24">
+        <h2 id="next" class="w3-xlarge">Where to go next</h2>
+        <p>
+          If you want to see examples, start in the Gallery. If you’re choosing upgrades, check the Bolt-ons page.
+          If you want to estimate value (PPD), use the Calculator.
+        </p>
+
+        <div class="w3-row-padding w3-margin-top">
+          <div class="w3-col m4 s12 w3-margin-bottom">
+            <a href="gallery.html" class="w3-button w3-black w3-round-large w3-block">Open Gallery</a>
+          </div>
+          <div class="w3-col m4 s12 w3-margin-bottom">
+            <a href="boltsons.html" class="w3-button w3-orange w3-round-large w3-block">Bolt-ons</a>
+          </div>
+          <div class="w3-col m4 s12 w3-margin-bottom">
+            <a href="modcalc.html" class="w3-button w3-orange w3-round-large w3-block">Calculator</a>
+          </div>
+        </div>
+
+        <p class="w3-text-grey w3-small w3-margin-top">
+          Tip: If you’re comparing dynos, try to compare runs on the same dyno type and similar conditions.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+
+<footer class="w3-black w3-padding-24">
+  <div class="w3-content vehicles-wrap">
+    <h2 class="w3-large">Sitemap</h2>
+
+    <div class="w3-row-padding w3-small">
+      <div class="w3-third w3-margin-bottom">
+        <h3 class="w3-medium">Pages</h3>
+        <a class="w3-button w3-black w3-small w3-block w3-left-align" href="index.html">Home</a>
+        <a class="w3-button w3-black w3-small w3-block w3-left-align" href="gallery.html">Gallery</a>
+        <a class="w3-button w3-black w3-small w3-block w3-left-align" href="about.html">About</a>
+        <a class="w3-button w3-black w3-small w3-block w3-left-align" href="contact.html">Contact</a>
+        <a class="w3-button w3-black w3-small w3-block w3-left-align" href="modcalc.html">Calculator</a>
+        <a class="w3-button w3-black w3-small w3-block w3-left-align" href="vehiclesfaq.html">Vehicles FAQ</a>
+        <a class="w3-button w3-black w3-small w3-block w3-left-align" href="boltsons.html">Bolt-ons</a>
+        <a class="w3-button w3-black w3-small w3-block w3-left-align" href="dynos.html">Dynos</a>
+      </div>
+
+      <div class="w3-third w3-margin-bottom">
+        <h3 class="w3-medium">Concept Pages</h3>
+        <a class="w3-button w3-black w3-small w3-block w3-left-align" href="concept1.html">Concept 1</a>
+        <a class="w3-button w3-black w3-small w3-block w3-left-align" href="concept2.html">Concept 2</a>
+        <a class="w3-button w3-black w3-small w3-block w3-left-align" href="concept3.html">Concept 3</a>
+      </div>
+
+      <div class="w3-third">
+        <p class="w3-small">© 2025 Performance Calculator</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleMenu() {
+  var menu = document.getElementById("mobileMenu");
+  if (menu.classList.contains("w3-show")) menu.classList.remove("w3-show");
+  else menu.classList.add("w3-show");
+}
+</script>
+
+</body>
+</html>

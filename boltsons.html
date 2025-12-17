@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Performance Calculator | Bolt-ons</title>
+
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/forms.css">
+</head>
+
+<body class="w3-light-grey">
+
+<header>
+  <nav class="w3-bar w3-black w3-large" role="navigation" aria-label="Primary">
+    <a href="index.html" class="w3-bar-item w3-button w3-hide-small">Home</a>
+    <a href="gallery.html" class="w3-bar-item w3-button w3-hide-small">Gallery</a>
+    <a href="about.html" class="w3-bar-item w3-button w3-hide-small">About</a>
+    <a href="contact.html" class="w3-bar-item w3-button w3-hide-small">Contact</a>
+    <a href="modcalc.html" class="w3-bar-item w3-button w3-hide-small">Calculator</a>
+
+    <button class="w3-bar-item w3-button w3-right w3-hide-medium w3-hide-large"
+      type="button" onclick="toggleMenu()" aria-label="Open menu">☰</button>
+  </nav>
+
+  <div id="mobileMenu" class="w3-bar-block w3-black w3-hide w3-hide-medium w3-hide-large">
+    <a href="index.html" class="w3-bar-item w3-button">Home</a>
+    <a href="gallery.html" class="w3-bar-item w3-button">Gallery</a>
+    <a href="about.html" class="w3-bar-item w3-button">About</a>
+    <a href="contact.html" class="w3-bar-item w3-button">Contact</a>
+    <a href="modcalc.html" class="w3-bar-item w3-button">Calculator</a>
+  </div>
+
+  <!-- Breadcrumb -->
+  <ul class="w3-ul w3-small w3-text-grey w3-padding">
+    <li class="w3-padding-small">
+      <a href="index.html">Home</a> &gt; <a href="gallery.html">Gallery</a> &gt; Bolt-ons
+    </li>
+  </ul>
+</header>
+
+<main class="w3-content w3-padding-32 boltsons-wrap">
+
+  <!-- Page title and logo -->
+  <div class="w3-center w3-padding-16">
+    <img src="images/logo/logo.png" alt="Performance Calculator logo" class="boltsons-logo centered-logo">
+    <h1 class="w3-xxlarge w3-margin-top">Bolt-ons</h1>
+    <p class="w3-text-grey w3-large">Common upgrades that improve performance without opening the engine.</p>
+
+    
+    <div class="w3-margin-top">
+      <div class="w3-dropdown-click">
+        <button class="w3-button w3-white w3-border w3-round-large" type="button" onclick="toggleFilterMenu()">
+          Filter bolt-ons ▼
+        </button>
+
+        <div id="filterMenu" class="w3-dropdown-content w3-bar-block w3-card w3-round-large">
+          <button class="w3-bar-item w3-button" type="button" onclick="filterBoltOns('all')">Show all</button>
+          <button class="w3-bar-item w3-button" type="button" onclick="filterBoltOns('airflow')">Airflow</button>
+          <button class="w3-bar-item w3-button" type="button" onclick="filterBoltOns('exhaust')">Exhaust</button>
+          <button class="w3-bar-item w3-button" type="button" onclick="filterBoltOns('cooling')">Cooling</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quick tips card -->
+  <div class="w3-card w3-white w3-round-large w3-padding-24 w3-margin-bottom">
+    <h2 class="w3-xlarge">Quick tips before you buy</h2>
+    <ul class="w3-ul">
+      <li><strong>Set a goal:</strong> sound, spool, cooling, or top-end power.</li>
+      <li><strong>Plan supporting mods:</strong> some parts need tuning, clamps, or heat management.</li>
+      <li><strong>Compare value:</strong> cost vs estimated horsepower gain (use the calculator).</li>
+    </ul>
+  </div>
+
+  <!-- Examples of bolt-ons -->
+  <div class="w3-row-padding" id="boltOnGrid">
+
+    <div class="w3-col l3 m6 s12 w3-margin-bottom bolt-on-item" data-type="airflow">
+      <div class="w3-card w3-white w3-round-large">
+        <img src="images/gallery/inlet.jpg" alt="Turbo inlet pipe upgrade" class="w3-image">
+        <div class="w3-container w3-padding-16">
+          <h3 class="w3-large w3-margin-0">Turbo Inlet</h3>
+          <p class="w3-small w3-text-grey">Improves airflow before the turbo. Often paired with an intake.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-col l3 m6 s12 w3-margin-bottom bolt-on-item" data-type="exhaust">
+      <div class="w3-card w3-white w3-round-large">
+        <img src="images/gallery/catback.jpg" alt="Cat-back exhaust system" class="w3-image">
+        <div class="w3-container w3-padding-16">
+          <h3 class="w3-large w3-margin-0">Cat-back Exhaust</h3>
+          <p class="w3-small w3-text-grey">Mainly sound + flow. Low risk, easy install.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-col l3 m6 s12 w3-margin-bottom bolt-on-item" data-type="airflow">
+      <div class="w3-card w3-white w3-round-large">
+        <img src="images/gallery/highflow.jpg" alt="High-flow intake system" class="w3-image">
+        <div class="w3-container w3-padding-16">
+          <h3 class="w3-large w3-margin-0">High-flow Intake</h3>
+          <p class="w3-small w3-text-grey">Better breathing and turbo noise. Gains vary by platform.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-col l3 m6 s12 w3-margin-bottom bolt-on-item" data-type="cooling">
+      <div class="w3-card w3-white w3-round-large">
+        <img src="images/gallery/civic_inter.jpg" alt="Intercooler upgrade example" class="w3-image">
+        <div class="w3-container w3-padding-16">
+          <h3 class="w3-large w3-margin-0">Intercooler</h3>
+          <p class="w3-small w3-text-grey">Reduces heat soak and helps consistency, especially tuned cars.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="w3-card w3-white w3-round-large w3-padding-24 w3-margin-top">
+    <h2 class="w3-xlarge">Next step</h2>
+    <p>Use the calculator to estimate performance-per-dollar for your planned mod list.</p>
+    <a href="modcalc.html" class="w3-button w3-orange w3-round-large">Go to Calculator</a>
+    <a href="gallery.html" class="w3-button w3-light-grey w3-round-large w3-margin-left">Back to Gallery</a>
+  </div>
+
+</main>
+
+<footer class="w3-black w3-padding-24">
+  <div class="w3-content vehicles-wrap">
+    <h2 class="w3-large">Sitemap</h2>
+
+    <div class="w3-row-padding w3-small">
+      <div class="w3-third w3-margin-bottom">
+        <h3 class="w3-medium">Pages</h3>
+        <a class="w3-button w3-black w3-small w3-block w3-left-align" href="index.html">Home</a>
+        <a class="w3-button w3-black w3-small w3-block w3-left-align" href="gallery.html">Gallery</a>
+        <a class="w3-button w3-black w3-small w3-block w3-left-align" href="about.html">About</a>
+        <a class="w3-button w3-black w3-small w3-block w3-left-align" href="contact.html">Contact</a>
+        <a class="w3-button w3-black w3-small w3-block w3-left-align" href="modcalc.html">Calculator</a>
+        <a class="w3-button w3-black w3-small w3-block w3-left-align" href="vehiclesfaq.html">Vehicles FAQ</a>
+        <a class="w3-button w3-black w3-small w3-block w3-left-align" href="boltsons.html">Bolt-ons</a>
+        <a class="w3-button w3-black w3-small w3-block w3-left-align" href="dynos.html">Dynos</a>
+      </div>
+
+      <div class="w3-third w3-margin-bottom">
+        <h3 class="w3-medium">Concept Pages</h3>
+        <a class="w3-button w3-black w3-small w3-block w3-left-align" href="concept1.html">Concept 1</a>
+        <a class="w3-button w3-black w3-small w3-block w3-left-align" href="concept2.html">Concept 2</a>
+        <a class="w3-button w3-black w3-small w3-block w3-left-align" href="concept3.html">Concept 3</a>
+      </div>
+
+      <div class="w3-third">
+        <p class="w3-small">© 2025 Performance Calculator</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleMenu() {
+  var menu = document.getElementById("mobileMenu");
+  if (menu.classList.contains("w3-show")) menu.classList.remove("w3-show");
+  else menu.classList.add("w3-show");
+}
+
+function toggleFilterMenu() {
+  document.getElementById("filterMenu").classList.toggle("w3-show");
+}
+
+function filterBoltOns(type) {
+  var items = document.querySelectorAll(".bolt-on-item");
+
+  items.forEach(function(item) {
+    var itemType = item.getAttribute("data-type");
+    if (type === "all" || itemType === type) {
+      item.style.display = "";
+    } else {
+      item.style.display = "none";
+    }
+  });
+
+  // close dropdown after selection
+  document.getElementById("filterMenu").classList.remove("w3-show");
+}
+</script>
+
+</body>
+</html>

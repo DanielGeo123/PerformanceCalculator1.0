@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Performance Calculator | Gallery</title>
+
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/forms.css">
+</head>
+
+<body class="w3-light-grey">
+
+<header>
+  <nav class="w3-bar w3-black w3-large" role="navigation" aria-label="Primary">
+    <a href="index.html" class="w3-bar-item w3-button w3-hide-small">Home</a>
+    <a href="gallery.html" class="w3-bar-item w3-button w3-hide-small w3-border-bottom w3-border-orange">Gallery</a>
+    <a href="about.html" class="w3-bar-item w3-button w3-hide-small">About</a>
+    <a href="contact.html" class="w3-bar-item w3-button w3-hide-small">Contact</a>
+    <a href="modcalc.html" class="w3-bar-item w3-button w3-hide-small">Calculator</a>
+
+    <button class="w3-bar-item w3-button w3-right w3-hide-medium w3-hide-large"
+            type="button" onclick="toggleMenu()" aria-label="Open menu">☰</button>
+  </nav>
+
+  <div id="mobileMenu" class="w3-bar-block w3-black w3-hide w3-hide-medium w3-hide-large">
+    <a href="index.html" class="w3-bar-item w3-button">Home</a>
+    <a href="gallery.html" class="w3-bar-item w3-button">Gallery</a>
+    <a href="about.html" class="w3-bar-item w3-button">About</a>
+    <a href="contact.html" class="w3-bar-item w3-button">Contact</a>
+    <a href="modcalc.html" class="w3-bar-item w3-button">Calculator</a>
+  </div>
+
+  <!-- Breadcrumbs -->
+  <ul class="w3-ul w3-small w3-text-grey w3-padding">
+    <li class="w3-padding-small">
+      <a href="index.html">Home</a> &gt; Gallery
+    </li>
+  </ul>
+</header>
+
+<main class="w3-content w3-padding-16 gallery-wrap">
+
+  <section class="w3-center w3-padding-16">
+    <img src="images/logo/logo.png" alt="" class="logo-sm centered-logo">
+    <h1 class="w3-xxlarge w3-margin-top">Gallery</h1>
+    <p class="w3-text-grey">Vehicles • Mods • Dynos • Calculator Examples</p>
+
+    <div class="w3-bar w3-small w3-margin-top">
+      <a class="w3-button w3-white w3-border w3-round-large" href="vehiclesfaq.html">Vehicles FAQ</a>
+      <a class="w3-button w3-white w3-border w3-round-large" href="boltsons.html">Bolt-ons</a>
+      <a class="w3-button w3-white w3-border w3-round-large" href="dynos.html">Dynos</a>
+    </div>
+  </section>
+
+  <!-- Thumbnails -->
+  <section class="w3-row-padding w3-padding-16">
+
+    <div class="w3-col l3 m6 s12 w3-margin-bottom">
+      <div class="w3-card w3-white w3-round-large">
+        <img src="images/gallery/car01.jpg" alt="Volkswagen Golf R intake"
+             class="w3-image w3-round-large gallery-thumb"
+             onclick="openLightbox(this)">
+        <div class="w3-container w3-padding-16">
+          <h3 class="w3-large">Golf R – Intake</h3>
+          <p class="w3-small w3-text-grey">Category: Bolt-ons</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-col l3 m6 s12 w3-margin-bottom">
+      <div class="w3-card w3-white w3-round-large">
+        <img src="images/gallery/dynorun.jpg" alt="Dyno chart run"
+             class="w3-image w3-round-large gallery-thumb"
+             onclick="openLightbox(this)">
+        <div class="w3-container w3-padding-16">
+          <h3 class="w3-large">Dyno Run</h3>
+          <p class="w3-small w3-text-grey">Category: Dynos</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-col l3 m6 s12 w3-margin-bottom">
+      <div class="w3-card w3-white w3-round-large">
+        <img src="images/gallery/catback.jpg" alt="Cat-back exhaust system"
+             class="w3-image w3-round-large gallery-thumb"
+             onclick="openLightbox(this)">
+        <div class="w3-container w3-padding-16">
+          <h3 class="w3-large">Cat-back Exhaust</h3>
+          <p class="w3-small w3-text-grey">Category: Bolt-ons</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-col l3 m6 s12 w3-margin-bottom">
+      <div class="w3-card w3-white w3-round-large">
+        <img src="images/gallery/civic_inter.jpg" alt="Intercooler upgrade on a Civic Type R"
+             class="w3-image w3-round-large gallery-thumb"
+             onclick="openLightbox(this)">
+        <div class="w3-container w3-padding-16">
+          <h3 class="w3-large">Intercooler Upgrade</h3>
+          <p class="w3-small w3-text-grey">Category: Bolt-ons</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-col l3 m6 s12 w3-margin-bottom">
+      <div class="w3-card w3-white w3-round-large">
+        <img src="images/gallery/stang_dyno.jpg" alt="Mustang dyno chart"
+             class="w3-image w3-round-large gallery-thumb"
+             onclick="openLightbox(this)">
+        <div class="w3-container w3-padding-16">
+          <h3 class="w3-large">Mustang – Dyno</h3>
+          <p class="w3-small w3-text-grey">Category: Dynos</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-col l3 m6 s12 w3-margin-bottom">
+      <div class="w3-card w3-white w3-round-large">
+        <img src="images/gallery/inlet.jpg" alt="Turbo inlet pipe"
+             class="w3-image w3-round-large gallery-thumb"
+             onclick="openLightbox(this)">
+        <div class="w3-container w3-padding-16">
+          <h3 class="w3-large">Turbo Inlet</h3>
+          <p class="w3-small w3-text-grey">Category: Bolt-ons</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-col l3 m6 s12 w3-margin-bottom">
+      <div class="w3-card w3-white w3-round-large">
+        <img src="images/gallery/brz_intake.jpg" alt="BRZ intake upgrade"
+             class="w3-image w3-round-large gallery-thumb"
+             onclick="openLightbox(this)">
+        <div class="w3-container w3-padding-16">
+          <h3 class="w3-large">BRZ – Intake</h3>
+          <p class="w3-small w3-text-grey">Category: Bolt-ons</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-col l3 m6 s12 w3-margin-bottom">
+      <div class="w3-card w3-white w3-round-large">
+        <img src="images/gallery/camaro.jpg" alt="Camaro Vs BMW performance run"
+             class="w3-image w3-round-large gallery-thumb"
+             onclick="openLightbox(this)">
+        <div class="w3-container w3-padding-16">
+          <h3 class="w3-large">Camaro vs BMW Run</h3>
+          <p class="w3-small w3-text-grey">Category: Vehicles</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+</main>
+
+<!-- Lightbox -->
+<div id="lightbox" class="w3-modal" onclick="closeLightbox()">
+  <div class="w3-modal-content w3-animate-zoom w3-black w3-center">
+    <span class="w3-button w3-display-topright w3-large" onclick="closeLightbox()" aria-label="Close">×</span>
+    <img id="lightboxImg" class="w3-image" alt="">
+    <p id="lightboxCap" class="w3-padding w3-small w3-text-grey"></p>
+  </div>
+</div>
+
+<footer class="w3-black w3-padding-24">
+  <div class="w3-content vehicles-wrap">
+    <h2 class="w3-large">Sitemap</h2>
+
+    <div class="w3-row-padding w3-small">
+      <div class="w3-third w3-margin-bottom">
+        <h3 class="w3-medium">Pages</h3>
+        <a class="w3-button w3-black w3-small w3-block w3-left-align" href="index.html">Home</a>
+        <a class="w3-button w3-black w3-small w3-block w3-left-align" href="gallery.html">Gallery</a>
+        <a class="w3-button w3-black w3-small w3-block w3-left-align" href="about.html">About</a>
+        <a class="w3-button w3-black w3-small w3-block w3-left-align" href="contact.html">Contact</a>
+        <a class="w3-button w3-black w3-small w3-block w3-left-align" href="modcalc.html">Calculator</a>
+        <a class="w3-button w3-black w3-small w3-block w3-left-align" href="vehiclesfaq.html">Vehicles FAQ</a>
+        <a class="w3-button w3-black w3-small w3-block w3-left-align" href="boltsons.html">Bolt-ons</a>
+        <a class="w3-button w3-black w3-small w3-block w3-left-align" href="dynos.html">Dynos</a>
+      </div>
+
+      <div class="w3-third w3-margin-bottom">
+        <h3 class="w3-medium">Concept Pages</h3>
+        <a class="w3-button w3-black w3-small w3-block w3-left-align" href="concept1.html">Concept 1</a>
+        <a class="w3-button w3-black w3-small w3-block w3-left-align" href="concept2.html">Concept 2</a>
+        <a class="w3-button w3-black w3-small w3-block w3-left-align" href="concept3.html">Concept 3</a>
+      </div>
+
+      <div class="w3-third">
+        <p class="w3-small">© 2025 Performance Calculator</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleMenu() {
+  var menu = document.getElementById("mobileMenu");
+  if (menu.classList.contains("w3-show")) menu.classList.remove("w3-show");
+  else menu.classList.add("w3-show");
+}
+
+function openLightbox(imgEl) {
+  document.getElementById("lightboxImg").src = imgEl.src;
+  document.getElementById("lightboxImg").alt = imgEl.alt;
+  document.getElementById("lightboxCap").textContent = imgEl.alt;
+  document.getElementById("lightbox").style.display = "block";
+}
+
+function closeLightbox() {
+  document.getElementById("lightbox").style.display = "none";
+}
+</script>
+
+</body>
+</html>

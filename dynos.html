@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Performance Calculator | Dynos</title>
+
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/forms.css">
+</head>
+
+<body class="w3-light-grey">
+
+<header>
+  <nav class="w3-bar w3-black w3-large" role="navigation" aria-label="Primary">
+    <a href="index.html" class="w3-bar-item w3-button w3-hide-small">Home</a>
+    <a href="gallery.html" class="w3-bar-item w3-button w3-hide-small">Gallery</a>
+    <a href="about.html" class="w3-bar-item w3-button w3-hide-small">About</a>
+    <a href="contact.html" class="w3-bar-item w3-button w3-hide-small">Contact</a>
+    <a href="modcalc.html" class="w3-bar-item w3-button w3-hide-small">Calculator</a>
+
+    <button class="w3-bar-item w3-button w3-right w3-hide-medium w3-hide-large"
+            type="button" onclick="toggleMenu()" aria-label="Open menu">☰</button>
+  </nav>
+
+  <div id="mobileMenu" class="w3-bar-block w3-black w3-hide w3-hide-medium w3-hide-large">
+    <a href="index.html" class="w3-bar-item w3-button">Home</a>
+    <a href="gallery.html" class="w3-bar-item w3-button">Gallery</a>
+    <a href="about.html" class="w3-bar-item w3-button">About</a>
+    <a href="contact.html" class="w3-bar-item w3-button">Contact</a>
+    <a href="modcalc.html" class="w3-bar-item w3-button">Calculator</a>
+  </div>
+
+  <!-- Breadcrumb -->
+  <ul class="w3-ul w3-small w3-text-grey w3-padding">
+    <li class="w3-padding-small">
+      <a href="index.html">Home</a> &gt; <a href="gallery.html">Gallery</a> &gt; Dynos
+    </li>
+  </ul>
+</header>
+
+<main class="w3-content w3-padding-32 dynos-wrap">
+  <div class="w3-center w3-margin-bottom">
+    <img src="images/logo/logo.png" alt="Performance Calculator logo" class="logo-sm centered-logo">
+    <h1 class="w3-xxlarge w3-margin-bottom">Dynos</h1>
+    <p class="w3-text-grey w3-large w3-margin-top">
+      Examples of dyno charts and what they can tell you about a setup.
+    </p>
+  </div>
+
+  <!-- Info Card -->
+  <section class="w3-card w3-white w3-round-large w3-padding-24 w3-margin-bottom">
+    <h2 class="w3-xlarge">What to look for</h2>
+    <ul class="w3-ul">
+      <li><b>Peak horsepower</b> and <b>peak torque</b></li>
+      <li><b>Smoothness</b> of the curve (power delivery)</li>
+      <li><b>Before vs after</b> on the same dyno and same settings</li>
+      <li><b>Notes</b> about fuel, temperature, and supporting mods</li>
+    </ul>
+    <p class="w3-text-grey w3-margin-top">
+      Tip: dynos are best used for comparison (baseline vs modded), not bragging rights.
+    </p>
+  </section>
+
+  <!-- W3 Accordion (Requirement) -->
+  <section class="w3-card w3-white w3-round-large w3-padding-24 w3-margin-bottom">
+    <h2 class="w3-xlarge">Dyno FAQs</h2>
+
+    <button class="w3-button w3-block w3-left-align w3-light-grey w3-round-large" type="button"
+            onclick="toggleAccordion('faq1')">
+      Why do dyno numbers vary so much?
+    </button>
+    <div id="faq1" class="w3-hide w3-padding-16">
+      Different dyno types, weather correction, tire pressure/strap tension, and gear used can all change results.
+      Compare runs on the same dyno for best accuracy.
+    </div>
+
+    <button class="w3-button w3-block w3-left-align w3-light-grey w3-round-large w3-margin-top" type="button"
+            onclick="toggleAccordion('faq2')">
+      What matters more: peak power or the curve?
+    </button>
+    <div id="faq2" class="w3-hide w3-padding-16">
+      The curve often matters more for real driving. A smooth, strong midrange can feel faster than a higher peak
+      with a weak band.
+    </div>
+
+    <button class="w3-button w3-block w3-left-align w3-light-grey w3-round-large w3-margin-top" type="button"
+            onclick="toggleAccordion('faq3')">
+      How should I do a “before vs after” test?
+    </button>
+    <div id="faq3" class="w3-hide w3-padding-16">
+      Use the same dyno, same fuel, same tire pressure, and same settings. Do a baseline first, then re-test after
+      the mod with as few variables changed as possible.
+    </div>
+  </section>
+
+  <!-- Dyno Examples -->
+  <section class="w3-card w3-white w3-round-large w3-padding-24">
+    <h2 class="w3-xlarge">Dyno Examples</h2>
+
+    <div class="w3-row-padding w3-margin-top">
+      <div class="w3-col l6 m6 s12 w3-margin-bottom">
+        <div class="w3-card w3-white w3-round-large">
+          <img src="images/gallery/dynorun.jpg"
+               alt="Dyno chart example showing horsepower and torque curves"
+               class="w3-image w3-round-large">
+          <div class="w3-container w3-padding">
+            <h3 class="w3-large w3-margin-top">Dyno Run</h3>
+            <p class="w3-text-grey w3-small">
+              Look for curve shape and where power drops off.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="w3-col l6 m6 s12 w3-margin-bottom">
+        <div class="w3-card w3-white w3-round-large">
+          <img src="images/gallery/camaro.jpg"
+               alt="Dyno sheet of Camaro VS BMW showing horsepower and torque results"
+               class="w3-image w3-round-large">
+          <div class="w3-container w3-padding">
+            <h3 class="w3-large w3-margin-top">Dyno Sheet Camaro Vs BMW</h3>
+            <p class="w3-text-grey w3-small">
+              Compare before/after with matching conditions for best accuracy.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-center w3-margin-top">
+      <a href="gallery.html" class="w3-button w3-orange w3-round-large">Back to Gallery</a>
+    </div>
+  </section>
+</main>
+
+<footer class="w3-black w3-padding-24">
+  <div class="w3-content vehicles-wrap">
+    <h2 class="w3-large">Sitemap</h2>
+
+    <div class="w3-row-padding w3-small">
+      <div class="w3-third w3-margin-bottom">
+        <h3 class="w3-medium">Pages</h3>
+        <a class="w3-button w3-black w3-small w3-block w3-left-align" href="index.html">Home</a>
+        <a class="w3-button w3-black w3-small w3-block w3-left-align" href="gallery.html">Gallery</a>
+        <a class="w3-button w3-black w3-small w3-block w3-left-align" href="about.html">About</a>
+        <a class="w3-button w3-black w3-small w3-block w3-left-align" href="contact.html">Contact</a>
+        <a class="w3-button w3-black w3-small w3-block w3-left-align" href="modcalc.html">Calculator</a>
+        <a class="w3-button w3-black w3-small w3-block w3-left-align" href="vehiclesfaq.html">Vehicles FAQ</a>
+        <a class="w3-button w3-black w3-small w3-block w3-left-align" href="boltsons.html">Bolt-ons</a>
+        <a class="w3-button w3-black w3-small w3-block w3-left-align" href="dynos.html">Dynos</a>
+      </div>
+
+      <div class="w3-third w3-margin-bottom">
+        <h3 class="w3-medium">Concept Pages</h3>
+        <a class="w3-button w3-black w3-small w3-block w3-left-align" href="concept1.html">Concept 1</a>
+        <a class="w3-button w3-black w3-small w3-block w3-left-align" href="concept2.html">Concept 2</a>
+        <a class="w3-button w3-black w3-small w3-block w3-left-align" href="concept3.html">Concept 3</a>
+      </div>
+
+      <div class="w3-third">
+        <p class="w3-small">© 2025 Performance Calculator</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleMenu() {
+  var menu = document.getElementById("mobileMenu");
+  if (menu.classList.contains("w3-show")) menu.classList.remove("w3-show");
+  else menu.classList.add("w3-show");
+}
+
+function toggleAccordion(id) {
+  var el = document.getElementById(id);
+  if (el.classList.contains("w3-show")) {
+    el.classList.remove("w3-show");
+    el.classList.add("w3-hide");
+  } else {
+    el.classList.remove("w3-hide");
+    el.classList.add("w3-show");
+  }
+}
+</script>
+
+</body>
+</html>

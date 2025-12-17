@@ -1,0 +1,105 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Performance Calculator | About</title>
+
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/forms.css">
+</head>
+
+<body class="w3-light-grey">
+
+<header>
+  <nav class="w3-bar w3-black w3-large" role="navigation" aria-label="Primary">
+    <a href="index.html" class="w3-bar-item w3-button w3-hide-small">Home</a>
+    <a href="gallery.html" class="w3-bar-item w3-button w3-hide-small">Gallery</a>
+    <a href="about.html" class="w3-bar-item w3-button w3-hide-small w3-border-bottom w3-border-orange">About</a>
+    <a href="contact.html" class="w3-bar-item w3-button w3-hide-small">Contact</a>
+    <a href="modcalc.html" class="w3-bar-item w3-button w3-hide-small">Calculator</a>
+
+    <button class="w3-bar-item w3-button w3-right w3-hide-medium w3-hide-large"
+            type="button" onclick="toggleMenu()" aria-label="Open menu">☰</button>
+  </nav>
+
+  <div id="mobileMenu" class="w3-bar-block w3-black w3-hide w3-hide-medium w3-hide-large">
+    <a href="index.html" class="w3-bar-item w3-button">Home</a>
+    <a href="gallery.html" class="w3-bar-item w3-button">Gallery</a>
+    <a href="about.html" class="w3-bar-item w3-button">About</a>
+    <a href="contact.html" class="w3-bar-item w3-button">Contact</a>
+    <a href="modcalc.html" class="w3-bar-item w3-button">Calculator</a>
+  </div>
+
+  <!-- Breadcrumb -->
+  <ul class="w3-ul w3-small w3-text-grey w3-padding">
+    <li class="w3-padding-small">
+      <a href="index.html">Home</a> &gt; About
+    </li>
+  </ul>
+</header>
+
+<main class="w3-content w3-padding-32 page-wrap">
+  <section class="w3-center w3-padding-16">
+    <img src="images/logo/logo.png" alt="" class="w3-image logo-sm">
+    <h1 class="w3-xxlarge w3-margin-top">About the Project</h1>
+    <p class="w3-text-grey">A simple hub for comparing mods and learning what gives the best value.</p>
+  </section>
+
+  <section class="w3-card w3-white w3-round-large w3-padding-24">
+    <h2 class="w3-xlarge">What this site does</h2>
+    <ul class="w3-ul">
+      <li>Helps compare mod cost vs estimated gains (Performance Per Dollar).</li>
+      <li>Organizes common bolt-ons and dyno examples for quick reference.</li>
+      <li>Supports a clean, beginner-friendly layout for mobile and desktop.</li>
+    </ul>
+
+    <h2 class="w3-xlarge w3-margin-top">How to use it</h2>
+    <p>
+      Start with the calculator to estimate value, then check the Gallery to see examples of parts, dynos,
+      and common upgrade paths.
+    </p>
+  </section>
+</main>
+
+<footer class="w3-black w3-padding-24">
+  <div class="w3-content vehicles-wrap">
+    <h2 class="w3-large">Sitemap</h2>
+
+    <div class="w3-row-padding w3-small">
+      <div class="w3-third w3-margin-bottom">
+        <h3 class="w3-medium">Pages</h3>
+        <a class="w3-button w3-black w3-small w3-block w3-left-align" href="index.html">Home</a>
+        <a class="w3-button w3-black w3-small w3-block w3-left-align" href="gallery.html">Gallery</a>
+        <a class="w3-button w3-black w3-small w3-block w3-left-align" href="about.html">About</a>
+        <a class="w3-button w3-black w3-small w3-block w3-left-align" href="contact.html">Contact</a>
+        <a class="w3-button w3-black w3-small w3-block w3-left-align" href="modcalc.html">Calculator</a>
+        <a class="w3-button w3-black w3-small w3-block w3-left-align" href="vehiclesfaq.html">Vehicles FAQ</a>
+        <a class="w3-button w3-black w3-small w3-block w3-left-align" href="boltsons.html">Bolt-ons</a>
+        <a class="w3-button w3-black w3-small w3-block w3-left-align" href="dynos.html">Dynos</a>
+      </div>
+
+      <div class="w3-third w3-margin-bottom">
+        <h3 class="w3-medium">Concept Pages</h3>
+        <a class="w3-button w3-black w3-small w3-block w3-left-align" href="concept1.html">Concept 1</a>
+        <a class="w3-button w3-black w3-small w3-block w3-left-align" href="concept2.html">Concept 2</a>
+        <a class="w3-button w3-black w3-small w3-block w3-left-align" href="concept3.html">Concept 3</a>
+      </div>
+
+      <div class="w3-third">
+        <p class="w3-small">© 2025 Performance Calculator</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleMenu() {
+  var menu = document.getElementById("mobileMenu");
+  if (menu.classList.contains("w3-show")) menu.classList.remove("w3-show");
+  else menu.classList.add("w3-show");
+}
+</script>
+
+</body>
+</html>

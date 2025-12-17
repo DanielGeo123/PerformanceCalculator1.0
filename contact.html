@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Performance Calculator | Contact</title>
+
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/forms.css">
+</head>
+
+<body class="w3-light-grey">
+
+<header>
+  <nav class="w3-bar w3-black w3-large" role="navigation" aria-label="Primary">
+    <a href="index.html" class="w3-bar-item w3-button w3-hide-small">Home</a>
+    <a href="gallery.html" class="w3-bar-item w3-button w3-hide-small">Gallery</a>
+    <a href="about.html" class="w3-bar-item w3-button w3-hide-small">About</a>
+    <a href="contact.html" class="w3-bar-item w3-button w3-hide-small w3-border-bottom w3-border-orange">Contact</a>
+    <a href="modcalc.html" class="w3-bar-item w3-button w3-hide-small">Calculator</a>
+
+    <button class="w3-bar-item w3-button w3-right w3-hide-medium w3-hide-large"
+            type="button" onclick="toggleMenu()" aria-label="Open menu">☰</button>
+  </nav>
+
+  <div id="mobileMenu" class="w3-bar-block w3-black w3-hide w3-hide-medium w3-hide-large">
+    <a href="index.html" class="w3-bar-item w3-button">Home</a>
+    <a href="gallery.html" class="w3-bar-item w3-button">Gallery</a>
+    <a href="about.html" class="w3-bar-item w3-button">About</a>
+    <a href="contact.html" class="w3-bar-item w3-button">Contact</a>
+    <a href="modcalc.html" class="w3-bar-item w3-button">Calculator</a>
+  </div>
+
+  <ul class="w3-ul w3-small w3-text-grey w3-padding">
+    <li class="w3-padding-small">
+      <a href="index.html">Home</a> &gt; Contact
+    </li>
+  </ul>
+</header>
+
+<main class="w3-content w3-padding-32 page-wrap">
+  <section class="w3-center w3-padding-16">
+    <img src="images/logo/logo.png" alt="" class="logo-sm centered-logo">
+    <h1 class="w3-xxlarge w3-margin-top">Contact</h1>
+    <p class="w3-text-grey">Questions about mods, calculators, or submissions? Send a message.</p>
+  </section>
+
+  <!-- Short Form -->
+  <section class="w3-card w3-white w3-round-large w3-padding-24 w3-margin-bottom">
+    <h2 class="w3-xlarge">Quick Signup</h2>
+    <p class="w3-text-grey">Get updates when new calculators and mod categories are added.</p>
+
+    <form action="#" method="post">
+      <label class="w3-text-grey" for="newsletterEmail">Email</label>
+      <input id="newsletterEmail" class="w3-input w3-border w3-round" type="email" name="email" required>
+
+      <button class="w3-button w3-orange w3-round-large w3-margin-top" type="submit">
+        Join Newsletter
+      </button>
+    </form>
+  </section>
+
+  <!-- Long Form -->
+  <section class="w3-card w3-white w3-round-large w3-padding-24">
+    <h2 class="w3-xlarge">Full Contact Form</h2>
+    <p class="w3-text-grey">Send a detailed message and we’ll respond with guidance or next steps.</p>
+
+    <form action="#" method="post">
+      <label class="w3-text-grey" for="name">Name</label>
+      <input id="name" class="w3-input w3-border w3-round" type="text" name="name" required>
+
+      <label class="w3-text-grey w3-margin-top" for="email">Email</label>
+      <input id="email" class="w3-input w3-border w3-round" type="email" name="email" required>
+
+      <label class="w3-text-grey w3-margin-top" for="subject">Subject</label>
+      <select id="subject" class="w3-select w3-border w3-round" name="subject" required>
+        <option value="" disabled selected>Select one</option>
+        <option value="calculator">Calculator question</option>
+        <option value="mods">Mod suggestion</option>
+        <option value="bug">Report a bug</option>
+        <option value="other">Other</option>
+      </select>
+
+      <label class="w3-text-grey w3-margin-top" for="message">Message</label>
+      <textarea id="message" class="w3-input w3-border w3-round" name="message" rows="6" required></textarea>
+
+      <button class="w3-button w3-orange w3-round-large w3-margin-top" type="submit">
+        Submit
+      </button>
+    </form>
+  </section>
+</main>
+
+<footer class="w3-black w3-padding-24">
+  <div class="w3-content vehicles-wrap">
+    <h2 class="w3-large">Sitemap</h2>
+
+    <div class="w3-row-padding w3-small">
+      <div class="w3-third w3-margin-bottom">
+        <h3 class="w3-medium">Pages</h3>
+        <a class="w3-button w3-black w3-small w3-block w3-left-align" href="index.html">Home</a>
+        <a class="w3-button w3-black w3-small w3-block w3-left-align" href="gallery.html">Gallery</a>
+        <a class="w3-button w3-black w3-small w3-block w3-left-align" href="about.html">About</a>
+        <a class="w3-button w3-black w3-small w3-block w3-left-align" href="contact.html">Contact</a>
+        <a class="w3-button w3-black w3-small w3-block w3-left-align" href="modcalc.html">Calculator</a>
+        <a class="w3-button w3-black w3-small w3-block w3-left-align" href="vehiclesfaq.html">Vehicles FAQ</a>
+        <a class="w3-button w3-black w3-small w3-block w3-left-align" href="boltsons.html">Bolt-ons</a>
+        <a class="w3-button w3-black w3-small w3-block w3-left-align" href="dynos.html">Dynos</a>
+      </div>
+
+      <div class="w3-third w3-margin-bottom">
+        <h3 class="w3-medium">Concept Pages</h3>
+        <a class="w3-button w3-black w3-small w3-block w3-left-align" href="concept1.html">Concept 1</a>
+        <a class="w3-button w3-black w3-small w3-block w3-left-align" href="concept2.html">Concept 2</a>
+        <a class="w3-button w3-black w3-small w3-block w3-left-align" href="concept3.html">Concept 3</a>
+      </div>
+
+      <div class="w3-third">
+        <p class="w3-small">© 2025 Performance Calculator</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleMenu() {
+  var menu = document.getElementById("mobileMenu");
+  if (menu.classList.contains("w3-show")) menu.classList.remove("w3-show");
+  else menu.classList.add("w3-show");
+}
+</script>
+
+</body>
+</html>
