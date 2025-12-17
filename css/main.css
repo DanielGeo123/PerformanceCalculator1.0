@@ -1,0 +1,59 @@
+.page-wrap {
+  max-width: 900px;
+}
+
+.logo-sm {
+  width: 90px;
+}
+
+.home-wrap {
+  max-width: 1100px;
+}
+
+.home-logo {
+  width: 180px;
+  max-width: 60vw;
+  height: auto;
+  display: inline-block;
+}
+
+.centered-logo {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gallery-wrap {
+  max-width: 1100px;
+}
+
+.gallery-thumb {
+  cursor: pointer;
+}
+
+.calc-wrap {
+  max-width: 1000px;
+}
+
+.dynos-wrap {
+  max-width: 1000px;
+}
+
+.boltsons-wrap {
+  max-width: 1100px;
+}
+
+.boltsons-logo {
+  width: 72px;
+  height: auto;
+  display: block;
+}
+
+.vehicles-wrap {
+  max-width: 1000px;
+}
+
+.vehicles-logo {
+  max-width: 140px;
+  height: auto;
+  display: block;
+}
